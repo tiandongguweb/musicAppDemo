@@ -1,0 +1,5 @@
+<view class="container">
+  <view class="pageSection">
+    <button class="upload" catchtap="uploadFile" type="primary">请选择上传的图片</button>
+  </view>
+</view>
