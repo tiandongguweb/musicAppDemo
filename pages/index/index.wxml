@@ -1,0 +1,131 @@
+<view class="container">
+  <!-- 搜索 -->
+  <view class="header {{scrollDown?'scrolled':''}}">
+    <view class="location">
+      <image class="icon" src='/imgs/index/icon_location.png'></image>北京
+    </view>
+    <view class="search" bindtap='tapSearch'>
+      <image class="icon" src='/imgs/index/icon_search.png'></image>
+      <i class='fa-home'></i>
+      麻辣烫
+    </view>
+  </view>
+
+  <!-- 滚动条 -->
+  <swiper class="swiper" autoplay indicator-dots indicator-color="#fff" circular>
+    <block wx:for="{{banners}}">
+      <swiper-item>
+        <image src="{{item.img}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 菜单 -->
+  <swiper indicator-dots class="menu-swiper">
+    <swiper-item>
+      <view class="swiper-item">
+        <view class="menu" wx:for="{{shopData1}}">
+          <image src="{{item.shopUrl}}"></image>
+          <text>{{item.shopName}}</text>
+        </view>
+      </view>
+      <view class="swiper-item">
+        <view class="menu" wx:for="{{shopData2}}">
+          <image src="{{item.shopUrl}}"></image>
+          <text>{{item.shopName}}</text>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="swiper-item">
+        <view class="menu" wx:for="{{shopData3}}">
+          <image src="{{item.shopUrl}}"></image>
+          <text>{{item.shopName}}</text>
+        </view>
+      </view>
+      <view class="swiper-item">
+        <view class="menu" wx:for="{{shopData4}}">
+          <image src="{{item.shopUrl}}"></image>
+          <text>{{item.shopName}}</text>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+  <!-- 附近商家 -->
+  <view class="section">
+    <view class="section-title">附近商家</view>
+    <view class="filters">
+      <view bindtap='tapFilter' data-id="zonghepaixu" class="filter {{filterID=='zonghepaixu'?'active':''}}">综合排序
+        <text class="v">↓</text>
+      </view>
+      <view bindtap='tapFilter' data-id="xiaoliangzuigao" class="filter {{filterID=='xiaoliangzuigao'?'active':''}}">销量最高
+        <text class="v">↓</text>
+      </view>
+      <view bindtap='tapFilter' data-id="julizuijin" class="filter {{filterID=='julizuijin'?'active':''}}">距离最近
+        <text class="v">↓</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 一组数据 -->
+  <view class="fujin-list">
+    <navigator url="/pages/shop/shop?shopname={{item.shopname}}" wx:for="{{shoplist}}">
+      <view class="img-shops">
+        <view class="image">
+          <image src="{{item.shopUrl}}"></image>
+        </view>
+        <view class="shopContent">
+          <view class="shoptitle">{{item.shopname}}</view>
+          <view class="shopstatus">
+            <view class="left"> {{item.shopstatue}}</view>
+            <view class="right">
+              <view>{{item.shoptime}}</view>
+              <view>{{item.shoplocation}}</view>
+            </view>
+          </view>
+          <view class="shopxiaoshou">
+            <view class="pingjia">
+              <image class="pingjiaPic" src="../../imgs/wujiaoxing.jpg"></image>
+              <text>{{item.shopppingfen}}</text>
+            </view>
+            <view>{{item.shopyuexiao}}</view>
+          </view>
+          <view class="shopstatus">
+            <view class="shoppeisong">
+              <view>{{item.shopqisong}}</view>
+              <view class="peisong">
+                <view>{{item.shoppeisong}}</view>
+                <view>{{item.shopyuanpeisong}}</view>
+              </view>
+            </view>
+            <view class="meituanzhuan">{{item.shopzhuansong}}</view>
+          </view>
+          <view class="shopclass">
+            <image src="../../imgs/dianpu.jpg"></image>
+            <text>{{item.shopclass}}</text>
+          </view>
+          <view class="shopyouhui"></view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+
+  <!-- 优惠专区(模板设置) -->
+  <view class="section">
+    <view class="section-title good">优惠专区</view>
+    <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523954724534&di=aaf2b0f756ba5d2fd3dea7842b76faa2&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fnuomi%2Fwh%253D470%252C285%2Fsign%3Deec0f8b05043fbf2c579ae27874ee6b2%2F2f738bd4b31c870189176f5e247f9e2f0608ffe1.jpg"></image>
+  </view>
+
+  <!-- 为你优选(模板设置) -->
+  <view class="section">
+    <view class="section-title">为你优选</view>
+    <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564995637313&di=adafe7dc46091cd6b005394f545226ae&imgtype=0&src=http%3A%2F%2Fhomesitetask.zbjimg.com%2Fhomesite%2Ftask%2F1.png%2Forigine%2F5aa73d4c-9a6b-45e3-90d6-09592643cac6"></image>
+  </view>
+
+  <!-- 特色频道 -->
+  <view class="section">
+    <view class="section-title only">特色频道</view>
+    <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565023994105&di=c11728628e74dabec4c90f1ecd8e4e26&imgtype=0&src=http%3A%2F%2Fwww.k18.com%2Fnews%2Fupload%2F20151104%2F1446616914233202.png"></image>
+  </view>
+
+</view>

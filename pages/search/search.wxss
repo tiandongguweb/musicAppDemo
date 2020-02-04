@@ -1,0 +1,179 @@
+.header {
+  display: flex;
+  background: #fff;
+  padding: 20rpx;
+}
+
+.header .icon {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: top;
+}
+
+.header .search {
+  flex: 1;
+  color: #000;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  padding: 10rpx;
+  border-radius: 10rpx;
+  background: #eee;
+}
+
+.header .search .icon {
+  float: left;
+  margin: 1rpx 5rpx 0 0;
+}
+
+.header button {
+  margin-left: 20rpx;
+  font-size: 30rpx;
+}
+
+.header input {
+  height: 30rpx;
+}
+
+.result {
+  padding: 0;
+}
+
+.result .shop {
+  padding: 10rpx 0;
+  border-bottom: 1rpx solid #efefef;
+}
+
+.result .shop image {
+  width: 100%;
+  height: 266rpx;
+}
+
+.img-shops {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 240rpx;
+  background: #fff;
+}
+
+.img-shops .image {
+  width: 25%;
+}
+
+.img-shops .image image {
+  width: 100%;
+  height: 160rpx;
+}
+
+.img-shops .shopContent {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.shoptitle {
+  padding: 5rpx;
+  margin-left: 20rpx;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.shopstatus {
+  padding: 5rpx;
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25rpx;
+}
+
+.shopstatus .left {
+  padding: 5rpx;
+  background: #696969;
+  color: #fff;
+}
+
+.shopstatus .right {
+  padding: 5rpx;
+  margin-right: 10rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.shopstatus .right view {
+  margin: 0 10rpx;
+}
+
+.shopxiaoshou {
+  margin-left: 20rpx;
+  padding: 5rpx;
+  display: flex;
+  flex-direction: row;
+  font-size: 25rpx;
+}
+
+.shopxiaoshou .pingjia {
+  margin-right: 20rpx;
+}
+
+.result .shop .pingjiaPic {
+  width: 25rpx;
+  height: 25rpx;
+}
+
+.shoppeisong {
+  display: flex;
+  flex-direction: row;
+}
+
+.shoppeisong view {
+  padding: 0 10rpx;
+}
+
+.shoppeisong view:nth-of-type(1) {
+  padding-left: 0;
+}
+
+.peisong {
+  display: flex;
+}
+
+.peisong view {
+  padding: 0 0rpx;
+  margin: 0 2rpx;
+}
+
+.peisong view:nth-of-type(2) {
+  color: #696969;
+  text-decoration: line-through;
+}
+
+.shopstatus .meituanzhuan {
+  margin-right: 20rpx;
+  background: #feb70f;
+  padding: 0 10rpx;
+}
+
+.shopclass {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10rpx;
+  margin-left: 20rpx;
+  font-size: 25rpx;
+}
+
+ .result .shop .shopclass image {
+  margin-right: 5rpx;
+  width: 25rpx;
+  height: 25rpx;
+}
+
+.fujin-list {
+  display: flex;
+  flex-direction: column;
+}

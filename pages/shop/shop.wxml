@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="header">
+    <image class="logo" src='{{shopimage}}'></image>
+    <view class="name ellipsis">{{shopname}}</view>
+    <view class="welcome ellipsis">公告：{{gonggao}}</view>
+    <view bindtap="addActive" class="follow {{isActive%2==0?'active':''}}">收藏</view>
+    <view class="line"></view>
+    <view class="desc">{{guanggao}}</view>
+  </view>
+
+  <view class="content-container">
+    <view class="navigate">
+      <scroll-view class="classify-container" scroll-y>
+        <view bindtap="chooseClassify" class="{{classifyIsactive[index]}}" wx:for="{{classify}}" data-index="{{index}}">
+          <view class="name">{{item}}</view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="navigate list">
+      <scroll-view class="goods-container" scroll-y scroll-top="{{topNum}}">
+        <view class="goodList" data-index="{{index}}" capture-bind:tap="addnum" wx:for="{{caidan_list}}" wx:for-item="itemName">
+          <view class="title">{{itemName[0]}}</view>
+          <view class="goods" wx:for="{{itemName[1]}}">
+            <image class="pic" src='{{item.url}}'></image>
+            <view class="name ellipsis {{defalutClass}}">{{item.name}}</view>
+            <view class="sold">{{item.yuxiao}}</view>
+            <view class="price {{defalutClass}}">{{item.jiage}}</view>
+            <view class="addCart" bindtap="addNum" data-index="{{index}}" data-numname="{{item.name}}">
+              <image src=" /imgs/shop/plus.png "></image>
+            </view>
+            <view class="removeCart " bindtap="removeNum" data-index="{{index}}" data-numname="{{item.name}}">
+              <view class="remove "></view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+  <view class="cart ">
+    <view class="data ">
+      <view class="icon ">
+        <image src="/imgs/shop/cart.png "></image>
+        <view class="count ">{{numb}}</view>
+      </view>
+      <view class="total ">￥{{valueNum}}</view>
+    </view>
+    <button class="yellow ">去结算</button>
+  </view>
+</view>

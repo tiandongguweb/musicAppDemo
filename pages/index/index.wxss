@@ -1,0 +1,320 @@
+/* pages/index/index.wxss */
+
+.container {
+  background: #efefef;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  padding: 20rpx;
+  z-index: 1;
+  box-sizing: border-box;
+  transition: background 0.5s ease-in-out;
+}
+
+.header .icon {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: top;
+}
+
+.header .location {
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 30rpx;
+  padding: 10rpx 20rpx 10rpx 10rpx;
+  vertical-align: middle;
+}
+
+.header .search {
+  flex: 1;
+  background: white;
+  border-radius: 30rpx;
+  color: #888;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  padding: 10rpx;
+}
+
+.scrolled {
+  background: #feb70f;
+}
+
+.page-section {
+  display: flex;
+  flex-direction: row;
+}
+
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper image {
+  width: 100%;
+}
+
+.menu {
+  font-size: 32rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+
+.menu image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.menu-swiper {
+  background-color: white;
+}
+
+.swiper-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.swiper-item:last-of-type {
+  justify-content: flex-start;
+}
+
+.section {
+  margin: 20rpx 0 5rpx 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section image {
+  width: 95%;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  text-align: center;
+  margin: 20rpx 0;
+  line-height: 70rpx;
+  color: black;
+}
+
+.section-title:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin-top: 37rpx;
+  margin-left: -180rpx;
+  width: 100rpx;
+  height: 1px;
+  background: #000;
+}
+
+.section-title:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin-top: 38rpx;
+  margin-left: 80rpx;
+  width: 100rpx;
+  height: 1rpx;
+  background: #000;
+}
+
+.section-title.good:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin-top: 38rpx;
+  margin-left: -180rpx;
+  width: 100rpx;
+  height: 1px;
+  background: #000;
+}
+
+.section-title.good::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin-top: 37rpx;
+  margin-left: 80rpx;
+  width: 100rpx;
+  height: 1rpx;
+  background: #000;
+}
+
+.section-title.only::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin-top: 40rpx;
+  margin-left: 80rpx;
+  width: 100rpx;
+  height: 1rpx;
+  background: #000;
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.filter {
+  flex: 1;
+  text-align: center;
+  border-top: 1rpx solid #ddd;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-top: 10rpx;
+  color: #696969;
+  font-size: 30rpx;
+}
+
+.v {
+  display: none;
+}
+
+.active, .active .v {
+  display: inline-block;
+  color: black;
+  font-weight: bold;
+}
+
+.img-shops {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 240rpx;
+  background: #fff;
+}
+
+.fujin-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-shops .image {
+  width: 25%;
+}
+
+.img-shops .image image {
+  width: 100%;
+  height: 160rpx;
+}
+
+.img-shops .shopContent {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.shoptitle {
+  padding: 5rpx;
+  margin-left: 20rpx;
+  font-weight: bold;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden;
+}
+
+.shopstatus {
+  padding: 5rpx;
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25rpx;
+}
+
+.shopstatus .left {
+  padding: 5rpx;
+  background: #696969;
+  color: #fff;
+}
+
+.shopstatus .right {
+  padding: 5rpx;
+  margin-right: 10rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.shopstatus .right view {
+  margin: 0 10rpx;
+}
+
+.shopxiaoshou {
+  margin-left: 20rpx;
+  padding: 5rpx;
+  display: flex;
+  flex-direction: row;
+  font-size: 25rpx;
+}
+
+.shopxiaoshou .pingjia {
+  margin-right: 20rpx;
+}
+
+.pingjiaPic {
+  width: 25rpx;
+  height: 25rpx;
+}
+
+.shoppeisong {
+  display: flex;
+  flex-direction: row;
+}
+
+.shoppeisong view {
+  padding: 0 10rpx;
+}
+.shoppeisong view:nth-of-type(1){
+  padding-left:0;
+}
+.peisong {
+  display: flex;
+}
+
+.peisong view {
+  padding: 0 0rpx;
+  margin: 0 2rpx;
+}
+
+.peisong view:nth-of-type(2) {
+  color: #696969;
+  text-decoration: line-through;
+}
+
+.shopstatus .meituanzhuan {
+  margin-right: 20rpx;
+  background: #feb70f;
+  padding: 0 10rpx;
+}
+
+.shopclass {
+  display: flex;
+  flex-direction:row;
+  justify-content:flex-start;
+  align-items:center;
+  padding: 10rpx;
+  margin-left: 20rpx;
+  font-size: 25rpx;
+}
+
+.shopclass image {
+  margin-right:5rpx;
+  width: 25rpx;
+  height: 25rpx;
+}

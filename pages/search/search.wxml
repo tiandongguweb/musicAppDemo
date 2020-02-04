@@ -1,0 +1,56 @@
+<view class="container">
+  <view class="header">
+    <view class="search">
+      <image class="icon" src="/imgs/index/icon_search.png"></image>
+      <input placeholder="支持瓜老火锅等9个店名的字段搜索" bindinput="getsearch"></input>
+    </view>
+    <button size="mini" class="yellow" bindtap="getsearchdata">搜索</button>
+  </view>
+  <view class="result">
+    <view class="shop">
+      <view class="fujin-list">
+        <block wx:for="{{shoplist}}">
+          <navigator url="/pages/shop/shop?shopname={{item.shopname}}">
+            <view class="img-shops">
+              <view class="image">
+                <image src="{{item.shopUrl}}"></image>
+              </view>
+              <view class="shopContent">
+                <view class="shoptitle">{{item.shopname}}</view>
+                <view class="shopstatus">
+                  <view class="left"> {{item.shopstatue}}</view>
+                  <view class="right">
+                    <view>{{item.shoptime}}</view>
+                    <view>{{item.shoplocation}}</view>
+                  </view>
+                </view>
+                <view class="shopxiaoshou">
+                  <view class="pingjia">
+                    <image class="pingjiaPic" src="../../imgs/wujiaoxing.jpg"></image>
+                    <text>{{item.shopppingfen}}</text>
+                  </view>
+                  <view>{{item.shopyuexiao}}</view>
+                </view>
+                <view class="shopstatus">
+                  <view class="shoppeisong">
+                    <view>{{item.shopqisong}}</view>
+                    <view class="peisong">
+                      <view>{{item.shoppeisong}}</view>
+                      <view>{{item.shopyuanpeisong}}</view>
+                    </view>
+                  </view>
+                  <view class="meituanzhuan">{{item.shopzhuansong}}</view>
+                </view>
+                <view class="shopclass">
+                  <image src="../../imgs/dianpu.jpg"></image>
+                  <text>{{item.shopclass}}</text>
+                </view>
+                <view class="shopyouhui"></view>
+              </view>
+            </view>
+          </navigator>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
